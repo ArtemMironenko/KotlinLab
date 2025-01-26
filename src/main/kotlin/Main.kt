@@ -1,123 +1,62 @@
 fun main() {
-    println("Операции с числами")
-
-    // 1. Двузначное число
-    val twoDigitNumber = 27
-    val tens = twoDigitNumber / 10
-    val units = twoDigitNumber % 10
-    val sumOfDigits = tens + units
-    val productOfDigits = tens * units
-    println("Двузначное число: $twoDigitNumber")
-    println("Десятки: $tens")
-    println("Единицы: $units")
-    println("Сумма цифр: $sumOfDigits")
-    println("Произведение цифр: $productOfDigits")
-
-    // 2. Трехзначное число
-    val threeDigitNumber = 123
-    val hundreds = threeDigitNumber / 100
-    val tens2 = (threeDigitNumber % 100) / 10
-    val units2 = threeDigitNumber % 10
-    val sumOfDigits2 = hundreds + tens2 + units2
-    val productOfDigits2 = hundreds * tens2 * units2
-    println("\nТрехзначное число: $threeDigitNumber")
-    println("Сотни: $hundreds")
-    println("Десятки: $tens2")
-    println("Единицы: $units2")
-    println("Сумма цифр: $sumOfDigits2")
-    println("Произведение цифр: $productOfDigits2")
-
-    // 3. Деление одного числа на другое
-    val dividend = 25
-    val divisor = 5
-    val quotient = dividend / divisor.toDouble()
-    println("\nДеление $dividend на $divisor: $quotient")
-
-    // 4. Возведение в степень
-    val baseNum = 2
-    val exponent = 5
-    val power = Math.pow(baseNum.toDouble(), exponent.toDouble()).toInt()
-    println("\n$baseNum в степени $exponent: $power")
-
-    // 5. Квадратный корень
-    val number = 25
-    val squareRoot = Math.sqrt(number.toDouble())
-    println("\nКвадратный корень из $number: $squareRoot")
+    // 1. Информация о типах данных
+    println("Типы данных в Kotlin:")
+    println("----------------------------------------------------------------------------------------------------------------")
+    println("| Тип данных | Описание                         | Пример переменной                                            |")
+    println("|------------|----------------------------------|--------------------------------------------------------------|")
+    println("| Int        | Целое число                      | val myInt: Int = 10                                          |")
+    println("| Double     | Число с плавающей точкой         | val myDouble: Double = 10.34698                              |")
+    println("| Float      | Число с плавающей точкой         | val myFloat: Float = 4.145f                                  |")
+    println("| String     | Строка                           | val myString: String = \"Привет!\"                             |")
+    println("| Boolean    | Логическое значение (true/false) | val myBoolean: Boolean = true                                |")
+    println("| Char       | Символ                           | val myChar: Char = 'A'                                       |")
+    println("| Array      | Массив                           | val myArray: Array<Int> = arrayOf(1, 2, 3)                   |")
+    println("| List       | Список (неизменяемый)            | val myList: List<String> = listOf(\"a\", \"b\", \"c\")             |")
+    println("| MutableList| Список (изменяемый)              | val myMutableList: MutableList<Int> = mutableListOf(1, 2, 3) |")
 
 
-    println("\nВычисление логических выражений")
+    // 2. Число с точностью до сотых
+    val num2 = 52.84698
+    println("\nЧисло с точностью до сотых: %.2f".format(num2))
 
-    // Задача 1
-    val A1 = true
-    val B1 = false
-    val C1 = false
+    // 3. Число e с точностью до десятых
+    val e = Math.E
+    println("\nЧисло e с точностью до десятых: %.1f".format(e))
 
-    println("Задача 1:")
-    println("а) A или B = ${A1 || B1}")
-    println("б) A и B = ${A1 && B1}")
-    println("в) B или C = ${B1 || C1}")
+    // 4. Вывод числа с сообщением перед ним
+    print("Введите число: ")
+    val num4 = readLine()!!.toDouble()
+    println("\nВы ввели число: $num4")
 
-    // Задача 2
-    val X2 = false
-    val Y2 = true
-    val Z2 = false
+    // 5. Вывод числа с сообщением после него
+    print("Введите число: ")
+    val num5 = readLine()!!.toDouble()
+    println("$num5 — вот какое число Вы ввели")
 
-    println("\nЗадача 2:")
-    println("а) X или Z = ${X2 || Z2}")
-    println("б) X и Y = ${X2 && Y2}")
-    println("в) X и Z = ${X2 && Z2}")
+    // 6. Три числа на одной строке с одним пробелом
+    println("\n1 13 49")
 
-    // Задача 3
-    val A3 = true
-    val B3 = false
-    val C3 = false
+    // 7. Три числа на одной строке с двумя пробелами
+    println("7  15  100")
 
-    println("\nЗадача 3:")
-    println("а) не A и B = ${!A3 && B3}")
-    println("б) A или не B = ${A3 || !B3}")
-    println("в) A и B или C = ${(A3 && B3) || C3}")
+    // 8. Три любых числа на одной строке с двумя пробелами
+    println("6  10  27")
 
-    // Задача 4
-    val X4 = true
-    val Y4 = true
-    val Z4 = false
+    // 9. Четыре любых числа на одной строке с одним пробелом
+    println("3 11 27 31")
 
-    println("\nЗадача 4:")
-    println("а) не X и Y = ${!X4 && Y4}")
-    println("б) X или не Y = ${X4 || !Y4}")
-    println("в) X или Y и Z = ${X4 || (Y4 && Z4)}")
+    // 10. Два числа одно под другим
+    println("\n50")
+    println("10")
 
-    // Задача 5
-    val X5 = true
-    val Y5 = true
-    val Z5 = false
+    // 11. Три числа одно под другим
+    println("\n5")
+    println("10")
+    println("21")
 
-    println("\nЗадача 5:")
-    println("а) не X и Y = ${!X5 && Y5}")
-    println("б) X или не Y = ${X5 || !Y5}")
-    println("в) X или Y и Z = ${X5 || (Y5 && Z5)}")
-
-    // Задача 6
-    val X6 = false
-    val Y6 = false
-    val Z6 = true
-
-    println("\nЗадача 6:")
-    println("а) X или Y и не Z = ${X6 || (Y6 && !Z6)}")
-    println("б) не X и не Y = ${!X6 && !Y6}")
-    println("в) не (X и Z) или Y = ${!(X6 && Z6) || Y6}")
-    println("г) X и не Y или Z = ${(X6 && !Y6) || Z6}")
-    println("д) X и (не Y или Z) = ${X6 && (!Y6 || Z6)}")
-    println("е) X или (не (Y или Z)) = ${X6 || !(Y6 || Z6)}")
-
-    // Задача 7
-    val A7 = true
-    val B7 = false
-    val C7 = false
-
-    println("\nЗадача 7:")
-    println("а) A или не (A и B) или C = ${A7 || !(A7 && B7) || C7}")
-    println("б) не A или A и (B или C) = ${!A7 || (A7 && (B7 || C7))}")
-    println("в) (A или B и не C) и C = ${(A7 || (B7 && !C7)) && C7}")
-
+    // 12. Четыре числа "столбиком"
+    println("\n10")
+    println("20")
+    println("30")
+    println("40")
 }

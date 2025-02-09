@@ -1,0 +1,9 @@
+fun main() {
+    println("Введите длины трех сторон треугольника:")
+    val a = readLine()!!.toDouble()
+    val b = readLine()!!.toDouble()
+    val c = readLine()!!.toDouble()
+    
+    val exists = (a < b + c) && (b < a + c) && (c < a + b)
+    println(if (exists) "Треугольник существует" else "Треугольник не существует")
+}

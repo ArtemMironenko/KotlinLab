@@ -1,0 +1,10 @@
+fun main() {
+    println("Введите двузначное число:")
+    val num = readLine()!!.toInt()
+    
+    val firstDigit = num / 10
+    val secondDigit = num % 10
+    
+    println("Первая цифра ${if (firstDigit > secondDigit) "больше" else "не больше"} второй")
+    println("Цифры ${if (firstDigit == secondDigit) "одинаковые" else "разные"}")
+}

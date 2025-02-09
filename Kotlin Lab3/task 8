@@ -1,0 +1,11 @@
+fun main() {
+    println("Введите расстояние в километрах:")
+    val km = readLine()!!.toDouble()
+    println("Введите расстояние в футах:")
+    val feet = readLine()!!.toDouble()
+    
+    val kmInMeters = km * 1000
+    val feetInMeters = feet * 0.305
+    
+    println(if (kmInMeters < feetInMeters) "Расстояние в километрах меньше" else "Расстояние в футах меньше")
+}
